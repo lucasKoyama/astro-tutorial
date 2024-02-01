@@ -1,0 +1,19 @@
+---
+import Social from './Social.astro';
+const platform = "github";
+const username = "lucasKoyama";
+---
+
+<footer>
+  <p>Learn more about my projects on <a target="_blank" href={`https://www.${platform}.com/${username}`}" >{platform}</a>!</p>
+  <Social platform="github" link="https://github.com/lucasKoyama" />
+  <Social platform="linkedin" link="https://www.linkedin.com/in/lucas-koyama/" />
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
