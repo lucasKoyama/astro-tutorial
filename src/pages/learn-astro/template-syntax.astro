@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const Element = "div";
+const htmlString = '<p class="mark">This is a raw HTML content inside a <code>Fragment</code> component</p>';
+---
+
+<BaseLayout>
+  <ul>
+    <li>Astro have JSX syntax</li>
+    <li>To add interactivity with astro you need to use a <code>script</code> tag and DOM within <code>.astro</code> file otherwise you can use a UI Lib/Framework like React</li>
+    <li><a href="https://docs.astro.build/en/basics/astro-syntax/#dynamic-tags" target="_blank">Allow Dynamic Tags</a></li>
+    <li>Has the <code>Fragment</code> component</li>
+    <li>Uses kebab-case instead of camelCase</li>
+  </ul>
+
+  <Element class="mark">This is a dynamic tag <code>div</code></Element>
+  <Fragment set:html={htmlString} />
+</BaseLayout>
