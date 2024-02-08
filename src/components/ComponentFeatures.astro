@@ -1,0 +1,51 @@
+---
+// https://docs.astro.build/en/basics/astro-components/
+// Component Script (JavaScript)
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+{/* - Component Props (PASSING DATA BETWEEN COMPONENTS) - */}
+interface Props {
+  title: string;
+} // typed props also possible!
+
+const { title } = Astro.props;
+// const { title="Using Default Props!" } = Astro.props; DEFAULT PROPS
+
+// Fetch external data, even from a private API or database
+// const data = await fetch('SOME_SECRET_API_URL/users').then(r => r.json());
+---
+
+{/* - Component Template - */}
+<!-- Component Template (HTML + JS Expressions) -->
+<!-- HTML comments supported! -->
+{/* JS comment syntax is also valid! */}
+
+<div id="content-wrapper">
+  <p>The above Header is the BaseLayout's Header, the below is the component's Header! Inspect and check the content-wrapper div!</p>
+  <Header />
+  <slot name="after-header"/>  <!--  children with the `slot="after-header"` attribute will go here -->
+
+  <!-- Include other UI framework components with a `client:` directive to hydrate: 'allowing JS interactivity' otherwise will be only HTML content -->
+  <!-- <SomeReactComponent client:visible /> -->
+
+  <!-- Use a template directive to build class names from multiple strings or even objects! -->
+  <p class:list={["add", "dynamic", {classNames: true}]} class="mark">element p with multiple classes, inspect me!</p>
+
+  {/* - SLOT FEATURES (INSERTING HTML ELEMENTS AS CHILDREN) - */}
+  <h1>{title}</h1>
+  <slot />  <!--  children without a `slot`, or with `slot="default"` attribute will go here DEFAULT CHILDREN -->
+
+  <table class="bg-white">
+    <thead class="sticky top-0 bg-white"><slot name="header"/></thead>
+    <tbody class="[&_tr:nth-child(odd)]:bg-gray-100"><slot name="body"/></tbody>
+  </table>
+
+  <slot name="fallback-example">
+    <p class="mark">This is the fallback content, no child passed to slot "fallback-example"</p>
+  </slot>
+
+  <Footer/>
+  <p>The below Footer is the BaseLayout's Footer, the above is the component's Footer! Inspect and check the content-wrapper div!</p>
+  <slot name="after-footer"/>  <!--  children with the `slot="after-footer"` attribute will go here -->
+</div>

@@ -1,0 +1,26 @@
+---
+import ComponentFeatures from '../../components/ComponentFeatures.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout>
+  <ComponentFeatures title="COMPONENT FEATURES">
+    <p slot="after-header" class="mark">"after-header" slot HERE!</p>
+    <div class="mark">simple default slot HERE!</div>
+
+    <br/>
+    <Fragment slot="header"> <!-- pass table header -->
+      <tr class="mark">
+        <th>Fragment slot header HERE!</th>
+        <th>With multiple elements</th>
+      </tr>
+    </Fragment>
+    <Fragment slot="body"> <!-- pass table body -->
+      <tr class="mark">
+        <td>Fragment slot body HERE!</td>
+        <td>For multiple elements</td>
+      </tr>
+    </Fragment>
+
+    <p slot="after-footer" class="mark">"after-footer" slot HERE!</p>
+  </ComponentFeatures>
+</BaseLayout>
