@@ -1,7 +1,7 @@
 # Overview - Astro tutorial
 This is the extended version of "Astro Introduction Tutorial" where I've added some personal explanations while learning how to be an astronaut!
 
-<a href="https://lucaskoyama-astronaut.netlify.app/about/">
+<a href="https://lucaskoyama-astronaut.netlify.app">
   🌐DEMO LIVE - Click here to check it out on the web!
 </a>
 
