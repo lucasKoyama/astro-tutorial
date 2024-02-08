@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const renderingModes = [
+  {
+    name: "output: 'static'",
+    description: "Static site generation (SSG). For delivering static HTML content, have the strongest SEO and PERFORMANCE!",
+    strenghts: [
+      "For Content Driven Sites",
+      "SEO",
+      "Performance",
+      "Fast Loading",
+      "SSG"
+    ],
+  },
+  {
+    name: "output: 'hybrid'",
+    description: "Server-side rendering (SSR). For mostly static sites with some on-demand routes.",
+    strenghts: [
+      "Custom data coming from APIs",
+      "Frequently changing content",
+      "API endpoints",
+      "Allow Protected pages",
+      "SSR"
+    ],
+  },
+  {
+    name: "output: 'server'",
+    description: "Server-side rendering (SSR). For highly dynamic sites with most or all on-demand routes.",
+    strenghts: [
+      "Web Apps",
+      "Frequently changing content",
+      "API endpoints",
+      "Allow Protected pages",
+      "SSR"
+    ],
+  },
+]
+---
+
+<BaseLayout>
+  <section>
+    Astro is mostly used for <strong>STATIC CONTENT</strong> website, but it can also provide the power of "Server Side Rendering" to process the client's request and send STATIC CONTENT from the server!
+
+    <ul>
+      Inside <code>astro.config.mjs</code> you can configure it to render in one of the modes below:
+      {
+        renderingModes.map((mode) => (
+          <li>
+            <details>
+              <summary><code>{ mode.name }</code></summary>
+              { mode.description }
+              
+              <ul>
+                Some key-words:
+                { mode.strenghts.map((strenght) => <li>{ strenght }</li>) }
+              </ul>
+            </details>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
