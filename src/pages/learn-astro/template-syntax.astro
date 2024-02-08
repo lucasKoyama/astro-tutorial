@@ -1,4 +1,5 @@
 ---
+import AstroDocRef from "../../components/AstroDocRef.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const Element = "div";
@@ -6,6 +7,7 @@ const htmlString = '<p class="mark">This is a raw HTML content inside a <code>Fr
 ---
 
 <BaseLayout>
+  <AstroDocRef url="basics/astro-syntax/" title="Template Syntax"/>
   <ul>
     <li>Astro have JSX syntax</li>
     <li>To add interactivity with astro you need to use a <code>script</code> tag and DOM within <code>.astro</code> file otherwise you can use a UI Lib/Framework like React</li>
