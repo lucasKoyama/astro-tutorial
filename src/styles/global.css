@@ -22,14 +22,28 @@ h1 {
 
 code {
   background-color: #bdc7d3;
+  border: 1px solid #61676e;
+}
+
+code, .note, .to-do {
   border-radius: 0.25em;
   padding: 0.15em;
-  border: 1px solid #61676e;
+  text-align: center;
 }
 
 .mark {
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+.note {
+  background-color: #f0fdf4;
+  border: 1px solid #bbddc5;
+}
+
+.to-do {
+  background-color: #fcfdf0;
+  border: 1px solid #dddbbb;
 }
 
 /* nav styles */
