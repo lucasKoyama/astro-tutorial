@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AstroDocRef from '../../components/AstroDocRef.astro';
+---
+<BaseLayout>
+  <AstroDocRef url="guides/content-collections/" title="Content Collections" />
+  Content collections are basically structured collections of data in:
+  <ul>
+    <li><code>.md</code> files</li>
+    <li><code>.mdx</code> files</li>
+    <li><code>.json</code> files</li>
+    <li><code>.yaml</code> files</li>
+  </ul>
+
+  It is the Astro way to utilize standardized data and has the following benefits:
+  <ul>
+    <li>organized documents</li>
+    <li>validated frontmatter</li>
+    <li>automatic TypeScript type-safety for all the content</li>
+  </ul>
+</BaseLayout>
