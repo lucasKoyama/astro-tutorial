@@ -1,0 +1,20 @@
+---
+import AstroDocRef from "../../components/AstroDocRef.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+
+---
+<BaseLayout>
+  <AstroDocRef url="guides/prefetch/" title="Prefetch"/>
+
+  <p>Prefetches other pages in the background before the user request the page.</p>
+  <ul>
+    It has the following options:
+    <li><code>hover</code> (default): Prefetch when you hover over or focus on the link.</li>
+    <li><code>tap</code> Prefetch just before you click on the link.</li>
+    <li><code>viewport</code> Prefetch as the links enter the viewport.</li>
+    <li><code>load</code> Prefetch all links on the page after the page is loaded.</li>
+  </ul>
+
+  <p class="note">When using {`<ViewTransitions />`} the prefetch for all routes is already enabled by default!</p>
+</BaseLayout>
