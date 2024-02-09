@@ -1,12 +1,10 @@
 ---
-import AstroDocRef from "../../components/AstroDocRef.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import LearnAstroLayout from "../../layouts/LearnAstroLayout.astro";
 ---
-<BaseLayout>
-  <AstroDocRef url="guides/view-transitions/" title="View Transitions"/>
+<LearnAstroLayout url="guides/view-transitions/" title="View Transitions">
   <p>View Transitions is basicaly a feature to make client side routing turning the naviation into a SPA experience like Next.js.</p>
 
   <p>Insert the component <code>{`<ViewTransitions />`}</code> inside the <code>{`<head>`}</code> element and done! SPA navigation.</p>
 
   <p class="to-do">TO-DO: Add different view transitions implementation in practice, exploring the features</p>
-</BaseLayout>
+</LearnAstroLayout>

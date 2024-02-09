@@ -1,0 +1,11 @@
+---
+import AstroDocRef from '../components/AstroDocRef.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const { url, title } = Astro.props;
+---
+<BaseLayout>
+  <AstroDocRef url={url} title={title} />
+  <slot />
+</BaseLayout>
+

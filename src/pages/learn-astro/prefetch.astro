@@ -1,12 +1,7 @@
 ---
-import AstroDocRef from "../../components/AstroDocRef.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-
+import LearnAstroLayout from "../../layouts/LearnAstroLayout.astro";
 ---
-<BaseLayout>
-  <AstroDocRef url="guides/prefetch/" title="Prefetch"/>
-
+<LearnAstroLayout url="guides/prefetch/" title="Prefetch">
   <p>Prefetches other pages in the background before the user request the page.</p>
   <ul>
     It has the following options:
@@ -17,4 +12,4 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </ul>
 
   <p class="note">When using {`<ViewTransitions />`} the prefetch for all routes is already enabled by default!</p>
-</BaseLayout>
+</LearnAstroLayout>

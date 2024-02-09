@@ -1,12 +1,9 @@
 ---
-import AstroDocRef from "../../../components/AstroDocRef.astro";
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LearnAstroLayout from "../../../layouts/LearnAstroLayout.astro";
 ---
 
-<BaseLayout>
+<LearnAstroLayout url="basics/astro-pages/" title="Pages" >
   <Fragment>
-    <AstroDocRef url="basics/astro-pages/" title="Pages" />
-
     This is a simple index.astro file that generated this page!
 
     Yep! There is nothing inside of this file because .astro files is already built to handle with the !DOCTYPE things
@@ -20,4 +17,4 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       <li><a href="/learn-astro/pages/endpoint"><code>.js/.ts</code> (as endpoints)</a></li>
     </ul>
   </Fragment>
-</BaseLayout>
+</LearnAstroLayout>

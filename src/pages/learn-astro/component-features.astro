@@ -1,11 +1,9 @@
 ---
-import AstroDocRef from '../../components/AstroDocRef.astro';
 import ComponentFeatures from '../../components/ComponentFeatures.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import LearnAstroLayout from '../../layouts/LearnAstroLayout.astro';
 ---
-<BaseLayout>
+<LearnAstroLayout url="basics/astro-components/" title="Components">
   <ComponentFeatures title="COMPONENT FEATURES">
-    <AstroDocRef url="basics/astro-components/" title="Components" />
     <p slot="after-header" class="mark">"after-header" slot HERE!</p>
     <div class="mark">simple default slot HERE!</div>
 
@@ -25,4 +23,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     <p slot="after-footer" class="mark">"after-footer" slot HERE!</p>
   </ComponentFeatures>
-</BaseLayout>
+</LearnAstroLayout>

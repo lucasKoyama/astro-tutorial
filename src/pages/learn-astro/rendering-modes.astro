@@ -1,6 +1,6 @@
 ---
 import AstroDocRef from "../../components/AstroDocRef.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import LearnAstroLayout from "../../layouts/LearnAstroLayout.astro";
 
 const renderingModes = [
   {
@@ -39,10 +39,8 @@ const renderingModes = [
 ]
 ---
 
-<BaseLayout>
+<LearnAstroLayout url="basics/rendering-modes/" title="Rendering Modes">
   <section>
-    <AstroDocRef url="basics/rendering-modes/" title="Rendering Modes"/>
-
     Astro is mostly used for <strong>STATIC CONTENT</strong> website, but it can also provide the power of "Server Side Rendering" to process the client's request and send STATIC CONTENT from the server!
 
     <ul>
@@ -64,4 +62,4 @@ const renderingModes = [
       }
     </ul>
   </section>
-</BaseLayout>
+</LearnAstroLayout>

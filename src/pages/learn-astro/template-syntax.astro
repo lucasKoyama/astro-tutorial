@@ -1,13 +1,11 @@
 ---
-import AstroDocRef from "../../components/AstroDocRef.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import LearnAstroLayout from "../../layouts/LearnAstroLayout.astro";
 
 const Element = "div";
 const htmlString = '<p class="mark">This is a raw HTML content inside a <code>Fragment</code> component</p>';
 ---
 
-<BaseLayout>
-  <AstroDocRef url="basics/astro-syntax/" title="Template Syntax"/>
+<LearnAstroLayout url="basics/astro-syntax/" title="Template Syntax">
   <ul>
     <li>Astro have JSX syntax</li>
     <li>To add interactivity with astro you need to use a <code>script</code> tag and DOM within <code>.astro</code> file otherwise you can use a UI Lib/Framework like React</li>
@@ -18,4 +16,4 @@ const htmlString = '<p class="mark">This is a raw HTML content inside a <code>Fr
 
   <Element class="mark">This is a dynamic tag <code>div</code></Element>
   <Fragment set:html={htmlString} />
-</BaseLayout>
+</LearnAstroLayout>
