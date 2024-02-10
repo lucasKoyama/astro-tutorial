@@ -1,0 +1,17 @@
+---
+import LearnAstroLayout from "../../layouts/LearnAstroLayout.astro";
+---
+<LearnAstroLayout url="guides/framework-components/" title="UI Frameworks">
+  <p>Astro supports integration with a lot of UI frameworks; the syntax used to use the components is JSX</p>
+  <p class="note">
+    NOTE: Astro converts the UI Components to HTML and doesn't load by default the interactivity/scripts 
+    of the components; to do this, you have to give it a "client" directive!
+  </p>
+
+  <ul>
+    <h3>Hydrating Component options (to allow interactivity):</h3>
+    <li><code>client:load</code> JS will begin importing when the page loads</li>
+    <li><code>client:visible</code> JS load when the user scrolls down and the component is visible on the page</li>
+    <li><code>client:only="svelte"</code> This component won't render on the server, but will render on the client when the page loads</li>
+  </ul>
+</LearnAstroLayout>
